@@ -8,5 +8,29 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    id:{
+      type: DataTypes.UUID,
+      primaryKey: true,
+      defaultValue: DataTypes.UUIDV4
+    },
+    summary:{
+      type: DataTypes.TEXT
+    },
+    score:{
+      type: DataTypes.INTEGER,
+    },
+    healthScore:{
+      type: DataTypes.INTEGER,
+    },
+    steps:{
+      type: DataTypes.TEXT
+    }
   });
 };
+
+//ID: *
+// Nombre *
+// Resumen del plato *
+// Puntuación
+// Nivel de "comida saludable"
+// Paso a paso
