@@ -10,17 +10,17 @@ const { Diet } = require('../db.js');
                 return response;
             }
             const types = [
-                "Gluten Free",
-                "Ketogenic",
-                "Vegetarian",
-                "Lacto-Vegetarian",
-                "Ovo-Vegetarian",
-                "Vegan",
-                "Pescetarian",
-                "Paleo",
-                "Primal",
-                "Low FODMAP",
-                "Whole30"
+                "gluten free",
+                "ketogenic",
+                "vegetarian",
+                "lacto ovo vegetarian",
+                // "Ovo-Vegetarian",
+                "vegan",
+                "pescatarian",
+                "paleolithic",
+                "primal",
+                "fodmap friendly",
+                "whole 30"
             ];
 
             types.map(async(e)=>{
@@ -33,8 +33,16 @@ const { Diet } = require('../db.js');
         } catch (error) {
             console.log(error)
         }
-    }
+    };
+
+    const getTypesFromDB = (req, res, next) => {
+        Diet.findAll()
+        .then(d => res.send(d))
+        .catch(err => next (err))
+        
+    };
 
 module.exports = {
-    getTypes
+    getTypes, 
+    getTypesFromDB
 }

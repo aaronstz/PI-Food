@@ -1,0 +1,96 @@
+.container{
+  height: 500px;
+  width: 400px;
+  margin: 5px;
+  margin-top: 10px;
+  margin-left: 140px;
+  float: left;
+}
+
+.img{
+  width: 400px;
+  height: 280px;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.671);
+  height: 380px;
+  transition: height 1.5s;
+  
+  border-radius: 4px;
+  /* height: 430px; */
+  /* width: 400px; */
+  box-shadow: 5px 5px 20px rgba(255, 239, 185, 0.267);
+  /* margin: 5px; */
+  /* margin-left: 33px; */
+  text-align: center;
+  /* float: left; */
+  
+  /* margin-right: 10px; */
+  /* overflow: hidden; */
+  }
+
+  .text {
+    /* display: inline-block; */
+    text-orientation: upright;
+    margin: 0.05rem 0.2rem 0.02rem 0.2rem;
+    font-size: 14px;
+    /* padding: 0.1rem 0.3rem; */
+    /* border: 1.5px solid rgb(236, 153, 85); */
+    border-radius: 15px;
+    /* background-color: rgba(235, 98, 35, 0.459);
+    */
+    color: transparent;
+    transition: color 2s;
+    /* width: fit-content; */
+    /* position: absolute; */
+    /* bottom: 30px; */
+    /* display: flex; */
+  }
+
+  .score{
+    margin: 0.05rem 0.2rem 0.02rem 0.2rem;
+    font-size: 15px;
+    color: rgb(47, 173, 75);
+    text-shadow: 0px 1px 3px rgb(236, 255, 68);
+    position: center;
+    text-align: center;
+  }
+
+  .title{
+    /* position: absolute; */
+	  /* bottom: 50px; */
+	  /* display: inside; */
+    font-size: 16px;
+    color:rgb(255, 255, 255);
+    text-shadow: 0px 1px 3px rgb(236, 255, 68)
+  }
+
+  .card:hover .title{
+    transform: translateY(-25px);
+    font-size: 20px;
+
+  }
+  
+  .card:hover {
+    /* padding-right: 25px; */
+    transform: translateY(-20px);
+    height: 500px;
+  }
+
+  .card:hover .score{
+    color:transparent;
+    text-shadow: none;
+  }
+  .card:hover .text {
+    text-align: center;
+    text-decoration-line: blink;
+    transform: translateY(-60px);
+    text-transform: capitalize;
+	  color: white;
+    text-shadow: 
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  }

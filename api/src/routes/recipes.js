@@ -1,15 +1,15 @@
 const { Router } = require('express');
 const router = Router();
 const axios = require('axios');
-const { getRecipes } = require('../Controllers/recipes.js');
-const { Recipe } = require('../db.js');
+const { getAllRecipes, foundId, getRecipes } = require('../Controllers/recipes.js');
+const { Recipe, Diet } = require('../db.js');
 
 
 
 router.get('/', async (req, res, next) => {
-    const {name} = req.query;
+    const { name } = req.query;
     try {
-        const allRecipes = await getRecipes()
+        const allRecipes = await getAllRecipes()
         if(name){
             const foundRecipe = allRecipes.filter(r => r.title?.toLowerCase().includes(name.toString().toLowerCase()))
             if(foundRecipe.length) res.status(200).send(foundRecipe)
@@ -20,15 +20,18 @@ router.get('/', async (req, res, next) => {
         else{
             res.status(200).send(allRecipes)
         }
+        console.log(allRecipes)
     } catch (error) {
         next(error)
     }
 });
 
-router.get('/:id', (req, res, next) => {
-    const {id} = req.params
+router.get('/:idRecipe', async (req, res, next) => {
     try {
-        const foundRecipe = allRecipes.filter(r => r.id === id)
+        const id = req.params.idRecipe;
+        // const allRecipes = await getRecipes()
+        const foundRecipe = await foundId(id)
+        console.log(foundRecipe)
         if(foundRecipe) return res.status(200).send(foundRecipe)
         else{
             return res.status(404).send('No se encontró la receta');
@@ -38,6 +41,28 @@ router.get('/:id', (req, res, next) => {
     }
 });
 
+router.post('/', async (req, res, next) => {
+    try {
+        const { title, image, summary, healthScore, steps, diet } = req.body
+        await Recipe.create({
+            title, 
+            image, 
+            summary, 
+            healthScore, 
+            steps
+        });
+        
+        const recipe = await Recipe.findOne({where:{title}})
+        
+        diet.map(d => recipe.addDiet(d)) 
+
+        // const myRecipe = Recipe.findOne({where:{dietId}})
+        return res.send({msg: 'Receta creada con éxito'})
+    } catch (error) {
+        next(error)
+        console.log(error)
+    }
+});
 
 
 

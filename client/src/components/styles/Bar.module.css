@@ -1,0 +1,148 @@
+body{
+    background-image: url('../../wallpaper/lofi.jpg');
+}
+
+.navbar{
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.616);
+}
+
+.navbar select  {
+    display: inline-block;
+    margin: auto;
+    color: white;
+} 
+
+/* .navbar input {
+    display: inline;
+
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+} */
+
+.navbar select:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navbar button.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+.diet{
+    text-transform: capitalize;
+}
+
+.bar{
+    width: 100%;
+    height: 100%;
+    margin: auto ;
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+}
+
+.btn{
+  width: 180px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.322);
+  margin : auto;
+  border-radius: 5px;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover{
+    transition: 0.5s ease-in-out;
+    background: #6eaeee;
+    color: rgb(0, 0, 0);
+}
+
+
+.select{
+    margin: 0 0 auto 0;
+    height: 40px;
+    width: 180px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(36, 35, 35);
+}
+
+
+.select:hover{
+    transition: 0.5s ease-in-out;
+    background: #6eaeee;
+    color: white;
+}
+
+
+
+.search{
+    margin: 5px;
+    width: 280px;
+    height: 40px;
+    cursor: text;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgb(189, 189, 189);
+    border-radius: 5px;
+    border: 1px solid #000000;
+    outline: none;
+    transition: 1s ease-in-out;
+    margin-left: 30px;
+}
+.search:hover{
+    background: rgb(255, 255, 255);
+}
+
+/* .btnSearch{
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.322);
+    margin : 5px;
+    border-radius: 5px;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+} */
+
+.img{
+    height:40px;
+    width: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgb(61, 61, 61);
+    /* background:rgb(150, 209, 194);
+     */
+     background-image: linear-gradient(45deg, #557055 25%, #8ed48c 25%, #8ed48c 50%, #557055 50%, #557055 75%, #8ed48c 75%, #8ed48c 100%);
+    background-size: 40px 40px;
+    transition : 1s ease-in-out;
+    transform: translateY(-1px);
+    color: rgb(207, 207, 207);
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #000;
+    /* transform: translateY(-10px); */
+}
+
+.img:hover{
+    background-image: linear-gradient(45deg, #709170 25%, #8ed48c 25%, #8ed48c 50%, #557055 50%, #557055 75%, #8ed48c 75%, #8ed48c 100%);
+    background-size: 45px 45px;
+    color: rgb(255, 255, 255);
+    
+}
