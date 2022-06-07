@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import Paginado from './Paginado'
 import SearchBar from './SearchBar'
 import s from './styles/Bar.module.css';
-import fondo from '../wallpaper/fondo.jpg'
 
 
 export default function Home(){
