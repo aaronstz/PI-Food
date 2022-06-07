@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logoHome from "../wallpaper/home.png";
-import SearchBar from './SearchBar'
 import s from "./styles/NavBar.module.css";
 
 export default function NavBar() {

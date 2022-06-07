@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { getDiets, createRecipe } from '../actions'
 import NavBar from './NavBar'
-import fondo from '../wallpaper/bogdan-mb0sco-jazzhopcafef-exampleanim.gif'
+
 
 function validate(input) {
     let validateName = /^[a-zA-Z\s]+$/;

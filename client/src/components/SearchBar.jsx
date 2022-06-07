@@ -3,7 +3,6 @@ import { useState,  } from 'react'
 import { useDispatch } from 'react-redux'
 import { getNameRecipes } from '../actions'
 import s from './styles/Bar.module.css'
-import search from '../wallpaper/icon.png'
 
 export default function SearchBar (){
     const dispatch = useDispatch()
